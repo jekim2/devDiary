@@ -1,7 +1,7 @@
 # Algorithm
 
 List
-  1. DP 
+  1. [DP] (#DP)
 
 
 ## DP
