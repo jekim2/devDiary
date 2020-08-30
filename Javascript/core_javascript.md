@@ -1,11 +1,16 @@
 # CORE_JAVASCRIPT
 javascript 기본 문법과 반드시 알아야 할 기본개념을 정리하는 세션입니다.  
 
+
+
 &#128525;   목차  
 
 
-[1.객체](#객체)      
-[2.가비지 컬렉션](#gabage-collection)
+[1.객체](#객체)     
+[2.가비지 컬렉션](#gabage-collection)  
+[3.자료구조와 자료형](#자료구조와-자료형)
+
+
 
 ## 객체
 
@@ -95,7 +100,7 @@ test4.description 	// email
 
 
 
-
+## 자료구조와 자료형
 
 
 
