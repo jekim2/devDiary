@@ -9,8 +9,6 @@ javascript 기본 문법과 반드시 알아야 할 기본개념을 정리하는
 
 ## 객체
 
----
-
 
 **§ 심볼형**  
 심볼형은 ES6에서 도입한 새로운 데이터 타입이다. 객체의 프로퍼티는 문자열 또는 심볼로 구성된다. 심볼은 **고유한 식별자**를 만들고 싶을 때 사용한다.  
@@ -24,7 +22,7 @@ test === test2 // false
 
 ~~~
 
-##### '숨김' 프로퍼티
+#### § 숨김 프로퍼티
 숨김 프로퍼티는 외부에서 사용할 수 없는 프로퍼티를 의미한다. 
 ~~~javascript
 
@@ -38,15 +36,86 @@ test[name] = 'jogo';
 
 ~~~
 
+#### § `{}` => []통해 심볼형 키를 만들어야 한다.
+~~~javascript
+
+let name = Symbol('name');
+let test = {
+  grade : 100,
+  [name] : 'jojo'
+ };
+ 
+~~~
+
+#### § for...in 에서 배제
+키가 심볼인 프로퍼티는 for...in 반복문에서 배제된다.
+but , Object.assign 프로퍼티는 배제하지 않는다.
+
+~~~javascript
+
+let name = Symbol('name');
+let test = {
+  grade : 100,
+  [name] : 'jojo'
+ };
+ 
+let obj = Object.assign({}, test);
+console.log(obj);		// { grade : 100, Symbol(name) : 'jojo' };
+ 
+~~~
+
+
+
+#### § 전역 심볼
+심볼은 이름이 같더라도 모두 별개로 취급한다. 이름이 같은 심볼 프로퍼티를 찾을 때 전역 심볼을 사용하면 된다.  
+`Symbol.for(key)` 는 심볼이 없는 경우 새로운 심볼을 생성하거나 심볼을 찾을 때 사용된다.  
+반면에 `Symbol.keyFor(sym)` 은 심볼을 통해 이름을 찾을 때 사용된다.
+
+전역심볼이 아닌 모든 심볼은 `description` 프로퍼티에 있다.
+
+
+~~~javascript
+
+let test = Symbol.for('name');
+let test2 = Symbol.for('name');
+let test3 = Symbol.for('password');
+let test4 = Symbol('email');
+
+test === test2   	// true
+
+Symbol.keyFor(test)	// name
+Symbol.keyFor(test3)	// password
+
+// description 프로퍼티
+test4.description 	// email
+
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 객체는 중괄호 {} 를 통해 '키(key) : 값(value)' 쌍으로 구성된 프로퍼티를 여러개 넣을 수 있다.
 
 ~~~javascript
+
 let test = new Object();      // '객체 생성자' 문법
 let test = {};                // '객체 리터럴' 문법
+
 ~~~
+
 
 
 
