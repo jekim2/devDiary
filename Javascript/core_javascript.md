@@ -102,6 +102,106 @@ test4.description 	// email
 
 ## 자료구조와 자료형
 
+#### § 원시형
+원시형(기본값) - `문자` , `숫자`, `bigint`, `boolean`, `symbol`, `null`, `undefined`  
+
+참조형 - `객체`(Array, fucntion, Date, RegExp, Map, Set)
+
+`null` 과 `undefined`를 제외한 제외한 원시형에는 다양한 메소드를 호출할 수 있다.
+
+
+#### § 숫자형
+자바스크립트의 숫자형은 두가지 자료형을 지원하는데, 하나는 일반적인 숫자(IEEE-764 부동소수점 숫자 형식) , BigInt 지원한다.
+
+- 0이 많이 붙은 숫자는 0의 갯수 뒤에 `e`를 추가해준다. e뒤의 숫자는 0의 갯수를 의미한다.
+~~~javascript
+
+123e6	// 123000000
+123e-6	// 0.000123
+
+~~~
+
+
+- 16진수는 `0x`, 2진수는 `0b`, 8진수는 `0o` 를 사용해 표현하며 대소문자를 가리지 않는다.
+~~~javascript
+ 
+ /** 16진수 **/
+ 0x0000ff	// 255
+ 0x0000FF	// 255
+ 
+ /** 2진수, 8진수 **/
+ let x = 0b11111111	// 255의 2진수
+ let y = 0o377		// 255의 8진수
+ x == y 		// true
+ 
+~~~
+
+#### § toString() 
+toString() 괄호안에 변환하고자 하는 진법을 넣어주면 된다. default는 10진수이다.
+~~~javascript
+
+ let num = 255;
+ num.toString(16)	// ff
+ num.toString(2)	// 11111111
+
+~~~
+  
+    
+    
+#### § 어림수
+
+`Math.floor()` - 첫째자리에서 버림
+
+`Math.ceil()`  - 첫째자리에서 올림
+
+`Math.round()` - 첫째자리에서 반올림  
+`toFixed(n)` - n번째자리까지 표현 n+1자리에서 반올림하여 문자형을 반환
+
+`Math.trunc()` - 소수점 아래 버림 (internet explorer 지원 X) 
+ 
+ *cf. 기타 Math 함수 *
+ `Math.random()` - 0 ~ 1 사이의 난수를 반환  
+ `Math.max(a,b,c)` - 인수 중 최대 값 반환  
+ `Math.min(a,b,c)` - 인수 중 최솟 값 반환  
+ `Math.pow(n,power` - n을 power번 거듭제곱한 수를 반환 ex. Math.pow(2,10)	// 1024
+    
+    
+
+#### § isNaN && isFinite
+Infinity, -Infinity, NaN 모두 숫자형에 속하지만 정상적인 숫자는 아니다. 따라서 이를 구분하기 위해 isNaN, isFinite가 있어야 한다.
+
+`isNaN()` - 인수를 숫자로 변환한 후 NaN인지 체크  
+`isFinite()` - 인수를 숫자로 변환한 후 숫자가 NaN , Infinity, -Infinity 인지 체크 (일반숫자인 경우 true반환)
+
+~~~javascript
+
+  isNaN(NaN)	// true 
+  isNaN("test")	// true
+  isFinite(NaN)	// false
+  isFinite(3)	// true
+  
+~~~
+
+  
+#### § parseInt ** parseFloat  
+
+숫자와 문자열이 혼용해서 쓰여졌을 때 ex. `40px` , `12pt` 등과 같은 숫자와 단위가 함께 쓰여졌을 때 숫자를 읽는 도중 숫자가 아니라는 판단이
+되었을 때 , `숫자까지 반환` 해 준다.  
+parseInt는 정수, parseFloat는 부동 소수점 숫자를 반환해 준다. parseInt 두번째 인수를 받을 수 있는데, 진수 문자열을 파싱해준다.  
+
+
+~~~javascript
+
+ parseInt('100px')	// 100
+ parseInt('12.5pt')	// 12.5
+ parseInt('0xff', 16)	// 255
+~~~
+
+
+
+
+
+
 
 
 
