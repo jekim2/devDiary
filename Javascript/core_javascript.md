@@ -154,19 +154,20 @@ toString() 괄호안에 변환하고자 하는 진법을 넣어주면 된다. de
 
 `Math.ceil()`  - 첫째자리에서 올림
 
-`Math.round()` - 첫째자리에서 반올림  
-`toFixed(n)` - n번째자리까지 표현 n+1자리에서 반올림하여 문자형을 반환
+`Math.round()` - 첫째자리에서 반올림    
 
-`Math.trunc()` - 소수점 아래 버림 (internet explorer 지원 X) 
+`toFixed(n)` - n번째자리까지 표현 n+1자리에서 반올림하여 문자형을 반환  
+
+`Math.trunc()` - 소수점 아래 버림 (internet explorer 지원 X)   
  
  *cf. 기타 Math 함수 *
- `Math.random()` - 0 ~ 1 사이의 난수를 반환  
- `Math.max(a,b,c)` - 인수 중 최대 값 반환  
- `Math.min(a,b,c)` - 인수 중 최솟 값 반환  
- `Math.pow(n,power` - n을 power번 거듭제곱한 수를 반환 ex. Math.pow(2,10)	// 1024
+ `Math.random()` - 0 ~ 1 사이의 난수를 반환    
+ `Math.max(a,b,c)` - 인수 중 최대 값 반환    
+ `Math.min(a,b,c)` - 인수 중 최솟 값 반환   
+ `Math.pow(n,power` - n을 power번 거듭제곱한 수를 반환 ex. Math.pow(2,10)	// 1024  
     
-    
-
+      
+  
 #### § isNaN && isFinite
 Infinity, -Infinity, NaN 모두 숫자형에 속하지만 정상적인 숫자는 아니다. 따라서 이를 구분하기 위해 isNaN, isFinite가 있어야 한다.
 
@@ -182,7 +183,9 @@ Infinity, -Infinity, NaN 모두 숫자형에 속하지만 정상적인 숫자는
   
 ~~~
 
-  
+   
+     
+     
 #### § parseInt ** parseFloat  
 
 숫자와 문자열이 혼용해서 쓰여졌을 때 ex. `40px` , `12pt` 등과 같은 숫자와 단위가 함께 쓰여졌을 때 숫자를 읽는 도중 숫자가 아니라는 판단이
