@@ -9,6 +9,9 @@ javascript 기본 문법과 반드시 알아야 할 기본개념을 정리하는
 [1.객체](#객체)     
 [2.가비지 컬렉션](#gabage-collection)  
 [3.자료구조와 자료형](#자료구조와-자료형)
+- 자료형(#§-원시형)  
+- 숫자형  
+- 문자열(#§-)  
 
 
 
@@ -198,7 +201,121 @@ parseInt는 정수, parseFloat는 부동 소수점 숫자를 반환해 준다. p
  parseInt('100px')	// 100
  parseInt('12.5pt')	// 12.5
  parseInt('0xff', 16)	// 255
+ parseInt(11, 2);	// 3	(11의 2진수로 변환)
 ~~~
+
+
+
+#### § 문자열
+
+
+🖌 **템플릿 리터럴**
+`${...}` 이러한 표현식을 템플릿 리터럴이라고 한다. 백틱을 사용하면 문자열을 여러줄에 걸쳐서 작성 할 수 있다.
+
+  
+  ~~~javascript
+  
+    let a = 3 + 5;
+    console.log(`a 는  => ${a} `);
+    
+    let b = ` list : 
+    		1,
+		2,
+		3,
+		4
+	     `
+    
+  ~~~
+    
+  🖌 **이스케이프 문자**  
+  모든 특수문자는 역슬래시 `\` 로 시작한다. 
+
+~~~javascript
+  
+console.log('\\');
+console.log('\*');
+	
+~~~
+
+ 🖌 **특정문자에 접근**    
+    
+ #### § str.charAt(index)
+
+~~~javascript
+
+  let str = "abcde";
+  str.charAt(0);	// a
+  str.charAt(1);	// b
+  str.charAt(str.length-1)	// 마지막 문자
+  str[str.length-1]		// 마지막 문자
+  
+~~~
+
+🖌 **문자열 찾기**  
+
+ #### § str.indexOf(findStr, index)   findStr 은 찾을 문자 , index는 몇번째 인덱스부터 찾을 것을 찾아 index를 반환해 준다.  
+ #### § str.lastIndexOf(findStr, index)   lastIndexOf은 뒤에서 부터 해당 문자열을 찾아 index를 반환해 준다.  
+ #### § str.includes(findStr,index)   findStr 은 찾을 문자 , index는 몇번째 인덱스부터 찾을 것을 찾아 해당 문자가 있으면 true, 없으면 false를 반환해준다.  
+ #### § str.startsWith(findStr)    findStr 해당 문자열로 시작하는지   
+ #### § str.endsWith(findStr)       findStr 해당 문자열로 끝나는지  
+    
+  
+  
+  🖌 **부분 문자열 찾기**  
+    
+ #### § str.slice(start, [end])  
+   
+   문자열을 `start`부터 `end`까지를 반환된다.  end가 생략됬다면 start부터 끝까지 반환된다. 음수라면 끝에서 부터 센다.
+   
+   ~~~ javascript
+   
+     let test = "javascript";
+     test.slice(0,5)	// javas
+     test.slice(0,1)	// j
+     test.slice(2)	// vascript
+     test.slice(-2, -1)	// p
+     
+   ~~~
+
+ #### § str.substring(start, [end])  
+  
+  start와 end사이의 문자열을 반환한다. slice와 달리 end보다 start가 더 커도 상관없다.
+  
+  
+    ~~~ javascript
+   
+     let test = "javascript";
+     test.substring(0,5)	// javas
+     test.substring(3,2)	// va
+     
+    ~~~
+     
+     
+     
+ 
+ 
+ 
+ 
+ #### § str.substr(start, [length])   
+ 
+   start 부터 시작해 length길이만큼 반환해 준다.
+   
+    ~~~ javascript
+   
+     let test = "javascript";
+     test.substr(2,4)	// vasc
+     test.substr(-4,2)	// ri (뒤에서 부터 2
+     
+    ~~~
+     
+  
+
+  
+
+
+
+
+  
 
 
 
