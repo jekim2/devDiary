@@ -8,7 +8,7 @@ List
 
 [3.DFS/BFS](#dfs-bfs)
 
-[3.HEAP](#heap)
+[4.HEAP](#heap)
 
 
 ## DP
