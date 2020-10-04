@@ -2,12 +2,17 @@
 
 타사 서비스 (google, facebook) 의 이메일 정보에 우리가 만든 서비스의 접근을 허락하여 사용자를 인증   
   
-## 용어  
-Client 		사용자가 사용하려는 우리가 만든 서비스  
-Resouce Server     서비스에 자신의 API를 제공하는 타사 서비스 (ex. 구글, 네이버)  
-Resouce Owner     타사 서비스 API의 정보의 주인. 우리가 만든 서비스를 타사 서비스를 통해 이용하려는 사용자  
+#### 용어
+
+용어 | 의미 
+---|---
+`Client` | 사용자가 사용하려는 우리가 만든 서비스
+`Resouce Server` | 서비스에 자신의 API를 제공하는 타사 서비스 (ex. 구글, 네이버) |
+`Resouce Owner` |  타사 서비스 API의 정보의 주인. 우리가 만든 서비스를 타사 서비스를 통해 이용하려는 사용자  
+
+
   
-## OAuth2.0 권한 획득 과정  
+#### OAuth2.0 권한 획득 과정  
   
 1. Client는 Resource Server에 특정 API를 사용할 것이라고 등록한다.  
 2. Resource server는 Client ID와 Client Secret을 부여  
