@@ -34,6 +34,10 @@ Output: false
      ex. l, (le, e), (lee, ee, e), (leet, eet, et, t) ....
 > 5. 해당 단어가 있는 경우 dp[end]를 true로 바꿔주고 다음 단어를 찾아 준다.
 > 6. 마지막 dp가 true인지 false인지 return.
+> <img src="https://user-images.githubusercontent.com/35910264/95743811-49bec480-0ccd-11eb-8558-0d9a0db5c3ce.jpg" width="300" height="200">
+
+
+
 
 ~~~javascript
 /**
