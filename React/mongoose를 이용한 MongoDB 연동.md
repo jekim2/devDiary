@@ -30,7 +30,7 @@ ex. 데이터 형식이 바뀌더라도 기존 데이터를 수정X
 <img src="https://user-images.githubusercontent.com/35910264/96869580-9c0c9c00-14aa-11eb-80a5-a3fdd2d187ae.jpg" width="300" height="300">
 
 
-## 💡 mongoose
+## 💡mongoose
 mongoose란 nodejs 환경에서 사용하는 MongoDB기반의 라이브러리이다.
 
 **mongoose 설치 및 적용**
@@ -65,7 +65,7 @@ es모듈(import/exprt) 는 nodejs에서 정의되어 있지 않는데 정의 할
 
 `yarn add esm`
 
-## 💡 데이터베이스의 스키마와 모델
+## 💡데이터베이스의 스키마와 모델
 mongoose 에는 `스키마` 와 `모델`이라는 개념이 있다.
 
 **스키마와 모델 구조**  
