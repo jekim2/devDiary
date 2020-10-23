@@ -1,4 +1,4 @@
-# Closure
+# Closure (클로저)
 
 
 
